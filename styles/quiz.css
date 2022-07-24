@@ -1,0 +1,115 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow", sans-serif;
+}
+
+body {
+  background-color: #FFB703;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+a, a:visited, a:link {
+  text-decoration: none;
+  font-family: inherit;
+  cursor: pointer;
+  color: inherit;
+}
+
+button {
+  width: 15rem;
+  height: 3rem;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  transition: all 0.3s;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1.5rem;
+  color: #023047;
+}
+.navbar a {
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #023047;
+  padding: 1rem;
+}
+.container__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+.container__header h1 {
+  font-size: 3.5rem;
+}
+.container__header h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.container__header p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.container__question-answer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 76rem;
+  margin-top: 0.8rem;
+}
+.container__question {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem;
+  line-height: 1.2;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+}
+.container__answers {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+.container__answer {
+  background-color: #fff;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+.container__submit {
+  margin-top: 1rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+}

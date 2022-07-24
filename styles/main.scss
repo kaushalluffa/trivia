@@ -1,0 +1,36 @@
+@use "./partials/global" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.headings {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 0;
+  text-align: center;
+  background-color: white;
+  margin-top: 1rem;
+  border-radius: .5rem;
+  padding-bottom: 2rem;
+  h1 {
+    font-size: 3rem;
+    line-height: 2;
+  }
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+}
+button {
+  margin-top: 5rem;
+}
+.svg{
+  margin-top: 3rem;
+  width: 10rem;
+  height: 10rem;
+}

@@ -1,0 +1,79 @@
+@use '../styles/partials/global' as *;
+@use '../styles/partials/variables' as *;
+
+.navbar{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1.5rem;
+    color: $middle-grey;
+    a{
+        background-color: white;
+        padding: .5rem 1rem;
+        border-radius: .5rem;
+
+    }
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: $middle-grey;
+    padding: 1rem;
+    &__header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        h1{
+            font-size: 3.5rem;
+        }
+        h2{
+            margin-top: 1rem;
+            font-size: 1.5rem;
+        }
+        p{
+            margin-top: 1rem;
+            font-size: 1.5rem;
+        }
+    }
+    &__question-answer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 76rem;
+        margin-top: .8rem;
+
+    }
+    &__question{
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 1rem;
+        padding: 1rem;
+        line-height: 1.2;
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: 600;
+    }
+    &__answers{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: .5rem;
+
+
+    }
+    &__answer{
+        background-color: #fff;
+        font-size: 1rem;
+        border-radius: .5rem;
+        padding: 1rem;
+        margin-top: .5rem;
+    }
+    &__submit{
+        margin-top: 1rem;
+        background-color: #ffffff;
+        border-radius: .5rem;
+    }
+}

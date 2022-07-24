@@ -1,0 +1,39 @@
+@use './variables' as *;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow", sans-serif;
+}
+body {
+  background-color: $maize-crayola;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+a,a:visited,a:link{
+  text-decoration: none;
+  font-family: inherit;
+  cursor: pointer;
+  color: inherit;
+
+}
+button{
+  width: 15rem;
+  height: 3rem;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: .5rem;
+  transition:  all .3s;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
