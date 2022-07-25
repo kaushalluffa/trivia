@@ -74,11 +74,15 @@ axios
         correctAnswer.innerText = `This is the correct answer ${res.data.results[0].correct_answer}`;
         const wrongAnswer = document.createElement("p");
         wrongAnswer.classList.add("wrong");
+        wrongAnswer.classList.add("animate__animated");
+        wrongAnswer.classList.add("animate__fadeInUp");
         wrongAnswer.innerText = "Sorry Wrong Answer";
         ans.appendChild(wrongAnswer);
         ans.appendChild(correctAnswer);
         const nextBtn = document.createElement("button");
         nextBtn.classList.add("next");
+        nextBtn.classList.add("animate__animated");
+        nextBtn.classList.add("animate__fadeInUp");
         nextBtn.innerText = "Next";
         container.appendChild(nextBtn);
         nextBtn.addEventListener("click", () => {
