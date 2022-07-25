@@ -71,6 +71,9 @@ axios
         ans.innerHTML = "";
         const correctAnswer = document.createElement("p");
         correctAnswer.classList.add("correct");
+        correctAnswer.classList.add("animate__animated");
+        correctAnswer.classList.add("animate__fadeInUp");
+        correctAnswer.classList.add("animate__delay-1s");
         correctAnswer.innerText = `This is the correct answer ${res.data.results[0].correct_answer}`;
         const wrongAnswer = document.createElement("p");
         wrongAnswer.classList.add("wrong");
