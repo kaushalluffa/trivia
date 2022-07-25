@@ -30,7 +30,7 @@ button {
   font-size: 1.5rem;
   font-weight: 500;
   background-color: #fff;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   padding: 0.5rem;
   transition: all 0.3s;
 }
@@ -112,4 +112,26 @@ img {
   margin-top: 1rem;
   background-color: #ffffff;
   border-radius: 0.5rem;
+}
+
+.next {
+  margin-top: 1rem;
+}
+
+.wrong {
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.correct {
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 1rem;
 }
