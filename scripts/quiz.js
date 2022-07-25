@@ -1,6 +1,9 @@
 const categoryEl = document.getElementById("category");
 const difficultyEl = document.getElementById("difficulty");
 const questionEl = document.getElementById("question");
+questionEl.classList.add("animate__animated");
+questionEl.classList.add("animate__fadeInDown");
+questionEl.classList.add("animate__delay-1s");
 const ans = document.querySelector(".container__answers");
 const checkAnsBtn = document.getElementById("check");
 axios
@@ -33,6 +36,7 @@ axios
     }
     categoryEl.innerText = category;
     difficultyEl.innerText = `Difficulty Level: ${difficulty}`;
+    
     questionEl.innerHTML = question;
 
     checkAnsBtn.addEventListener("click", checkAnswer);
@@ -44,12 +48,20 @@ axios
         checked.value === `${res.data.results[0].correct_answer}`
       ) {
         const correct = document.createElement('p')
-        correct.classList.add('correct')
+        correct.classList.add(
+          "correct"
+        );
+        correct.classList.add(
+          "animate__animated"
+        );
+        correct.classList.add("animate__fadeInDown");
         correct.innerText = `You are Correct. Congratulations`
         ans.innerHTML = ''
         ans.appendChild(correct)
         const nextBtn = document.createElement("button");
         nextBtn.classList.add("next");
+        nextBtn.classList.add("animate__animated");
+        nextBtn.classList.add("animate__fadeInUp");
         nextBtn.innerText = "Next";
         container.appendChild(nextBtn);
         nextBtn.addEventListener("click", () => {
