@@ -113,6 +113,9 @@ img {
   padding: 1rem;
   margin-top: 0.5rem;
 }
+.container__answer input {
+  margin-right: 0.3rem;
+}
 .container__submit {
   margin-top: 1rem;
   background-color: #ffffff;

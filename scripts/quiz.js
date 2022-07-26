@@ -6,6 +6,7 @@ questionEl.classList.add("animate__fadeInDown");
 questionEl.classList.add("animate__delay-1s");
 const ans = document.querySelector(".container__answers");
 const checkAnsBtn = document.getElementById("check");
+const container = document.getElementById('container')
 axios
   .get("https://opentdb.com/api.php?amount=1&difficulty=easy&type=multiple")
   .then((res) => {
@@ -24,15 +25,21 @@ axios
     const shuffledArray = shuffleArray(arr);
 
     for (let i = 0; i < arr.length; i++) {
-      const option = document.createElement("div");
-      const check = document.createElement("input");
-      check.setAttribute("type", "checkbox");
-      option.setAttribute("id", `option${i + 1}`);
-      option.classList.add("container__answer");
+      const label = document.createElement('label')
+      const option = document.createElement("span");
+      const radioInput = document.createElement("input");
+      label.setAttribute('for', `option${i +1}`)
+      radioInput.setAttribute("type", "radio");
+      radioInput.setAttribute("name", "option");
+      radioInput.setAttribute("id", `option${i + 1}`);
+      radioInput.setAttribute("value", arr[i]);
+      option.innerText = arr[i]
+      label.classList.add("container__answer");
 
-      option.innerHTML = `<input type="radio" name='option' id='option' value='${arr[i]}' /> <span> ${arr[i]}</span>`;
+      label.appendChild(radioInput);
+      label.appendChild(option)
 
-      ans.appendChild(option);
+      ans.appendChild(label);
     }
     categoryEl.innerText = category;
     difficultyEl.innerText = `Difficulty Level: ${difficulty}`;
@@ -56,6 +63,7 @@ axios
         );
         correct.classList.add("animate__fadeInDown");
         correct.innerText = `You are Correct. Congratulations`
+        container.removeChild(checkAnsBtn)
         ans.innerHTML = ''
         ans.appendChild(correct)
         const nextBtn = document.createElement("button");
@@ -82,6 +90,7 @@ axios
         wrongAnswer.innerText = "Sorry Wrong Answer";
         ans.appendChild(wrongAnswer);
         ans.appendChild(correctAnswer);
+        container.removeChild(checkAnsBtn);
         const nextBtn = document.createElement("button");
         nextBtn.classList.add("next");
         nextBtn.classList.add("animate__animated");
