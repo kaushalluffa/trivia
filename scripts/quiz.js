@@ -10,7 +10,7 @@ const container = document.getElementById('container')
 axios
   .get("https://opentdb.com/api.php?amount=1&difficulty=easy&type=multiple")
   .then((res) => {
-    console.log(res.data.results[0]);
+   
     const { category, difficulty, question } = res.data.results[0];
 
     const arr = [...res.data.results[0].incorrect_answers];
