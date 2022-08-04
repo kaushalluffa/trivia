@@ -1,10 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import {Link} from 'react-router-dom'
 import Axios from "axios";
 import "./quiz.css";
 
 const Quiz = () => {
-  const [showNextQuiz, setShowNextQuiz] = useState(false);
+//   const [showNextQuiz, setShowNextQuiz] = useState(false);
   const [isCorrectAnswer, setIsCorrectAnswer] = useState("");
   const [newQuestion, setNewQuestion] = useState({
     question: "",
@@ -47,7 +48,7 @@ const Quiz = () => {
     getQuestion();
   }, []);
   function handleChange(e) {
-      setChecked({ checked: e.target.value });
+    setChecked({ checked: e.target.value });
   }
   function checkAnswer() {
     if (checked.checked === newQuestion.correct_answer) {
@@ -60,10 +61,12 @@ const Quiz = () => {
     getQuestion();
     setIsCorrectAnswer("");
   }
-  
+
   return (
     <div>
-        
+      <Link to="/">
+        <nav className="navbar animate__animated animate__fadeIn">Home</nav>
+      </Link>
       <div className="container--quiz" id="container">
         <div className="container__header--quiz">
           <h1 className="animate__animated animate__fadeInDown">Play Trivia</h1>
