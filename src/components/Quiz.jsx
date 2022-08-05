@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import Axios from "axios";
 import "./quiz.css";
 
-const Quiz = () => {
+const Quiz = (props) => {
 //   const [showNextQuiz, setShowNextQuiz] = useState(false);
   const [isCorrectAnswer, setIsCorrectAnswer] = useState("");
   const [newQuestion, setNewQuestion] = useState({
@@ -17,7 +17,7 @@ const Quiz = () => {
   const [checked, setChecked] = useState({ checked: "" });
   function getQuestion() {
     Axios.get(
-      "https://opentdb.com/api.php?amount=1&difficulty=easy&type=multiple"
+      `https://opentdb.com/api.php?amount=1&category=${props.category}&type=multiple`
     ).then((res) => {
       const { category, difficulty, question, correct_answer } =
         res.data.results[0];
